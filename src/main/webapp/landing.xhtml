@@ -21,25 +21,44 @@
     <h:body styleClass="landing-body">
         <div class="landing-wrapper">
          
- 
-             <div class="ui-g-12 ui-md-4">
-                <div class="card overview">
-                    <div class="overview-content clearfix">
-                        
-						<h:panelGroup styleClass="md-inputfield">
-                            <p:inputText id="input"/>
-                            <label>Username</label>
-                        </h:panelGroup>
-
-                    </div>
-                  
-                </div>
-            </div>
-  
+ 			<div class="header">
+ 			 
+	 			   
+	 			   <div class="form">
+	 			   
+		             <div class="ui-g-12">
+		                <div class="card overview">
+		                    <div class="overview-content clearfix">
+		                        <div class="row">
+			                       <div class="block input_search ">
+									<h:panelGroup styleClass="md-inputfield">
+			                            <p:inputText id="input" style="width: 100%;height: 39px;"/>
+			                            <label>Sua busca</label>
+			                        </h:panelGroup>
+			                        </div>
+			                        
+			                         <p:panelGrid columns="1" layout="grid" styleClass="form-group ui-panelgrid-blank">
+                        <h:outputText id="displayRange" value="Values" style="font-size:16px"/>
+                        <p:slider for="txt6,txt7" display="displayRange" range="true" displayTemplate="Between {min} and {max}" minValue="0" maxValue="100" style="margin-top:15px"/>
+                    </p:panelGrid>
+                    <h:inputHidden id="txt6" value="20"/>
+                    <h:inputHidden id="txt7" value="80"/>
+			                        
+			                       
+								</div>
+								
+		                    </div>
+		                  
+		                </div>
+		            </div>
+		            
+		           </div> 
+		            
+  			</div>
            
            
         </div>
-        
+        <h:outputStylesheet name="css/precolegal.css" library="ultima-layout" />
         <h:outputStylesheet name="css/animate.css" library="ultima-layout" />
         <h:outputStylesheet name="css/ripple.css" library="ultima-layout" />
         <h:outputStylesheet name="css/layout-#{guestPreferences.theme}.css" library="ultima-layout" />
